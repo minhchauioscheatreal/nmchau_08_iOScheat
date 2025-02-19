@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MinhChau iOS Cheat</title>
+    <title>TrongThien iOS Cheat</title>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
@@ -20,18 +20,27 @@
     <div id="particles-js"></div>
     <div class="content">
         <div class="status">
-            <span></span> Aimdrag, Aim Check R8, Trợ Năng - Zalo: 0386316282
+            <span></span> Aimdrag, Aim Check R8 - Zalo: 0386316282
         </div>
         <p> <strong>Thời gian:</strong> <span id="clock">00:00:00</span></p>
         <label><input type="checkbox"> Tối ưu thiết bị - Buff Wps - Sensitivity </label>
         <p>@minhchauioscheatreal</p>
     </div>
+
+    <!-- Thêm âm thanh vào trang -->
+    <audio id="background-audio" autoplay loop>
+        <source src="audio.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ phát nhạc.
+    </audio>
+
     <script>
         function updateTime() {
             const now = new Date();
             document.getElementById("clock").innerText = now.toLocaleTimeString();
         }
         setInterval(updateTime, 1000);
+
+        // Hiệu ứng hạt (particles.js)
         particlesJS("particles-js", {
             particles: {
                 number: { value: 80 }, color: { value: "#ff0000" },
@@ -39,6 +48,14 @@
                 line_linked: { enable: true, color: "#ff0000", opacity: 0.6 },
                 move: { enable: true, speed: 2 }
             }
+        });
+
+        // Tự động phát âm thanh
+        document.addEventListener("DOMContentLoaded", function() {
+            const audio = document.getElementById("background-audio");
+            audio.play().catch(error => {
+                console.log("Tự động phát bị chặn, yêu cầu người dùng tương tác.");
+            });
         });
     </script>
 </body>
