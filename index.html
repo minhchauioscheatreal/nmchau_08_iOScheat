@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinhChau iOS Cheat</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background: #f8f8f8; overflow: hidden; }
+        #particles-js { position: absolute; width: 100%; height: 100%; z-index: -1; }
+        .content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+        .status { display: flex; align-items: center; }
+        .status span { width: 10px; height: 10px; background: green; border-radius: 50%; margin-right: 5px; }
+        .time { font-weight: bold; font-size: 20px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="content">
+        <div class="status">
+            <span></span> Aimdrag, Aim Check R8, Trợ Năng - Zalo: 0386316282
+        </div>
+        <p> <strong>Thời gian:</strong> <span id="clock">00:00:00</span></p>
+        <label><input type="checkbox"> Tối ưu thiết bị - Buff Wps - Sensitivity </label>
+        <p>@minhchauioscheatreal</p>
+    </div>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById("clock").innerText = now.toLocaleTimeString();
+        }
+        setInterval(updateTime, 1000);
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80 }, color: { value: "#ff0000" },
+                shape: { type: "circle" },
+                line_linked: { enable: true, color: "#ff0000", opacity: 0.6 },
+                move: { enable: true, speed: 2 }
+            }
+        });
+    </script>
+</body>
+</html>
